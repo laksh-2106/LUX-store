@@ -77,7 +77,7 @@ export interface Order {
   customerName: string;
   customerEmail: string;
   total: number;
-  status: "pending" | "completed" | "cancelled";
+  status: "pending" | "confirmed" | "completed" | "cancelled";
   createdAt: Date;
   items: OrderItem[];
 }
