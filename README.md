@@ -1,37 +1,58 @@
-# 🛍️ LuxeStore – Premium E-Commerce Web Application
+<div align="center">
 
-**LuxeStore** is a modern, responsive e-commerce web application built with **React, TypeScript, Vite, Tailwind CSS, and shadcn/ui**.  
-It delivers a clean shopping experience with a premium UI, smooth navigation, and a complete cart-to-checkout flow.
+# 🛍️ LuxeStore  
+### Premium E-Commerce Web Application
 
-🔗 **Live Demo:** https://lux-store-vt9n.vercel.app
+A modern, responsive e-commerce frontend built with **React, TypeScript, Vite, Tailwind CSS, and shadcn/ui**.
+
+🔗 **Live Demo:** https://lux-store-vt9n.vercel.app  
+
+<br/>
+
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-fast-purple?logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3-38bdf8?logo=tailwindcss)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-modern-black)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
+
+</div>
 
 ---
 
-## ✨ Features
+## ✨ Overview
 
-- 🏠 Elegant landing page with premium hero section
+**LuxeStore** is a clean and scalable e-commerce UI that demonstrates real-world frontend practices such as reusable components, global state management, responsive layouts, and a complete cart-to-checkout flow.
+
+This project focuses on **UI/UX quality**, **code organization**, and **production-ready structure**.
+
+---
+
+## 🚀 Features
+
+- 🏠 Premium landing page with gradient hero section
 - 🛍️ Product listing with responsive grid layout
 - 📄 Product detail pages
-- 🧺 Shopping cart with quantity management
+- 🧺 Shopping cart with quantity controls
 - 💳 Checkout flow (Cart → Address → Payment)
-- ✅ Order success & confirmation page
-- 🌗 Theme support using React Context
-- 🔔 Toast notifications for actions
-- 📱 Fully responsive UI
-- ⚡ Fast performance with Vite
+- ✅ Order success & confirmation screen
+- 🌗 Theme management using React Context
+- 🔔 Toast notifications
+- 📱 Fully responsive design
+- ⚡ Lightning-fast dev experience with Vite
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React + TypeScript
-- **Build Tool:** Vite
-- **Styling:** Tailwind CSS
-- **UI Library:** shadcn/ui + Radix UI
-- **State Management:** React Context & Hooks
-- **Routing:** React Router
-- **Notifications:** Sonner / Toaster
-- **Deployment:** Vercel
+| Category | Tech |
+|-------|------|
+| Frontend | React, TypeScript |
+| Styling | Tailwind CSS, shadcn/ui |
+| Routing | React Router |
+| State | React Context, Hooks |
+| Tooling | Vite, ESLint |
+| Deployment | Vercel |
 
 ---
 
@@ -39,31 +60,31 @@ It delivers a clean shopping experience with a premium UI, smooth navigation, an
 
 ### 🏠 Home Page
 ![Home Page](home.png.png)
-> Premium hero section with gradient background, featured collection badge, and call-to-action buttons.
+> Premium hero section with featured collection badge and CTA buttons.
 
 ---
 
 ### 🛍️ Products Page
 ![Products Page](products.png.png)
-> Displays all products in a clean and responsive card-based layout.
+> Clean, responsive product grid with category labels.
 
 ---
 
 ### 🧺 Shopping Cart
 ![Cart Page](cart.png.png)
-> Cart page with quantity controls, price calculation, and order summary.
+> Cart with quantity management, price calculation, and order summary.
 
 ---
 
 ### 🚚 Checkout Page
 ![Checkout Page](checkout.png.png)
-> Multi-step checkout flow with shipping details and order summary.
+> Multi-step checkout flow with shipping details.
 
 ---
 
-### ✅ Order Success Page
+### ✅ Order Success
 ![Order Success](order-success.png.png)
-> Order confirmation screen with status tracking and success notification.
+> Order confirmation with status tracking and success notification.
 
 ---
 
@@ -71,24 +92,13 @@ It delivers a clean shopping experience with a premium UI, smooth navigation, an
 
 ```txt
 src/
-├── assets/            # Images and static assets
+├── assets/            # Images & static assets
 ├── components/        # Reusable UI components
-│   ├── Navbar.tsx
-│   ├── ProductCard.tsx
-│   └── AdminSidebar.tsx
-├── context/           # Global contexts
-│   └── theme-context.tsx
-├── pages/             # Application pages
-│   ├── Index.tsx
-│   ├── Products.tsx
-│   ├── ProductDetail.tsx
-│   ├── Cart.tsx
-│   ├── Checkout.tsx
-│   ├── Payment.tsx
-│   └── OrderSuccess.tsx
+├── context/           # Global context (theme)
+├── pages/             # App pages
 ├── hooks/             # Custom hooks
-├── data/              # Static / mock data
-├── App.tsx            # Root component
-├── main.tsx           # Application entry point
-├── index.css          # Global styles (Tailwind)
+├── data/              # Mock / static data
+├── App.tsx
+├── main.tsx
+├── index.css
 └── vite-env.d.ts
