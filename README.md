@@ -1,20 +1,24 @@
-# 🛍️ LUX Store – Modern E-Commerce Web App
+# 🛍️ LuxeStore – Premium E-Commerce Web Application
 
-LUX Store is a modern, responsive e-commerce web application built using **React, TypeScript, Vite, Tailwind CSS, and shadcn/ui**.  
-It focuses on clean UI/UX, modular architecture, and scalable frontend practices.
+**LuxeStore** is a modern, responsive e-commerce web application built with **React, TypeScript, Vite, Tailwind CSS, and shadcn/ui**.  
+It delivers a clean shopping experience with a premium UI, smooth navigation, and a complete cart-to-checkout flow.
+
+🔗 **Live Demo:** https://lux-store-vt9n.vercel.app
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 🛒 Product listing & product detail pages
-- 🧺 Cart & checkout flow
-- 💳 Payment page UI
-- 🌗 Dark / Light theme support (Context API)
-- ⚡ Fast development with Vite
-- 🎨 Modern UI using Tailwind CSS + shadcn/ui
-- 📱 Fully responsive design
-- 🧠 Clean and scalable folder structure
+- 🏠 Elegant landing page with premium hero section
+- 🛍️ Product listing with responsive grid layout
+- 📄 Product detail pages
+- 🧺 Shopping cart with quantity management
+- 💳 Checkout flow (Cart → Address → Payment)
+- ✅ Order success & confirmation page
+- 🌗 Theme support using React Context
+- 🔔 Toast notifications for actions
+- 📱 Fully responsive UI
+- ⚡ Fast performance with Vite
 
 ---
 
@@ -23,10 +27,43 @@ It focuses on clean UI/UX, modular architecture, and scalable frontend practices
 - **Frontend:** React + TypeScript
 - **Build Tool:** Vite
 - **Styling:** Tailwind CSS
-- **UI Components:** shadcn/ui, Radix UI
-- **State Management:** React Context / Hooks
+- **UI Library:** shadcn/ui + Radix UI
+- **State Management:** React Context & Hooks
 - **Routing:** React Router
-- **Package Manager:** npm
+- **Notifications:** Sonner / Toaster
+- **Deployment:** Vercel
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](./screenshots/home.png)
+> Premium hero section with gradient background, featured collection badge, and call-to-action buttons.
+
+---
+
+### 🛍️ Products Page
+![Products Page](./screenshots/products.png)
+> Displays all products in a clean and responsive card-based layout.
+
+---
+
+### 🧺 Shopping Cart
+![Cart Page](./screenshots/cart.png)
+> Cart page with quantity controls, price calculation, and order summary.
+
+---
+
+### 🚚 Checkout Page
+![Checkout Page](./screenshots/checkout.png)
+> Multi-step checkout flow with shipping details and order summary.
+
+---
+
+### ✅ Order Success Page
+![Order Success](./screenshots/order-success.png)
+> Order confirmation screen with status tracking and success notification.
 
 ---
 
@@ -49,10 +86,9 @@ src/
 │   ├── Checkout.tsx
 │   ├── Payment.tsx
 │   └── OrderSuccess.tsx
-├── hooks/             # Custom React hooks
+├── hooks/             # Custom hooks
 ├── data/              # Static / mock data
-├── App.tsx            # Main app component
-├── main.tsx           # App entry point
+├── App.tsx            # Root component
+├── main.tsx           # Application entry point
 ├── index.css          # Global styles (Tailwind)
 └── vite-env.d.ts
-
