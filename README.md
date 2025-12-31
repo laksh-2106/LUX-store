@@ -38,31 +38,31 @@ It delivers a clean shopping experience with a premium UI, smooth navigation, an
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](./screenshots/home.png)
+![Home Page](home.png.png)
 > Premium hero section with gradient background, featured collection badge, and call-to-action buttons.
 
 ---
 
 ### 🛍️ Products Page
-![Products Page](./screenshots/products.png)
+![Products Page](products.png.png)
 > Displays all products in a clean and responsive card-based layout.
 
 ---
 
 ### 🧺 Shopping Cart
-![Cart Page](./screenshots/cart.png)
+![Cart Page](cart.png.png)
 > Cart page with quantity controls, price calculation, and order summary.
 
 ---
 
 ### 🚚 Checkout Page
-![Checkout Page](./screenshots/checkout.png)
+![Checkout Page](checkout.png.png)
 > Multi-step checkout flow with shipping details and order summary.
 
 ---
 
 ### ✅ Order Success Page
-![Order Success](./screenshots/order-success.png)
+![Order Success](order-success.png.png)
 > Order confirmation screen with status tracking and success notification.
 
 ---
