@@ -7,11 +7,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
-import { Loader2 } from "lucide-react";
-import { saveOrder, Order } from "@/data/store";
+import { Loader2, CheckCircle2 } from "lucide-react";
 
 const Checkout = () => {
-  const { cart, totalItems, totalPrice, clearCart } = useCart();
+  const { cart, totalItems, totalPrice } = useCart();
   const { toast } = useToast();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -24,41 +23,17 @@ const Checkout = () => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      // Create order
-      const order: Order = {
-        id: crypto.randomUUID(),
-        customerName: formData.name,
-        customerEmail: formData.email,
-        total: totalPrice,
-        status: "pending",
-        createdAt: new Date(),
-        items: cart.map((item) => ({
-          productId: item.id,
-          productName: item.name,
-          quantity: item.quantity,
-          price: item.price,
-        })),
-      };
+    // Simulate validation
+    await new Promise((resolve) => setTimeout(resolve, 500));
 
-      saveOrder(order);
-
-      toast({
-        title: "Order placed successfully!",
-        description: `Your order #${order.id.slice(0, 8)} has been confirmed`,
-      });
-
-      clearCart();
-      navigate("/");
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to place order. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setLoading(false);
-    }
+    setLoading(false);
+    // Navigate to payment page with customer info
+    navigate("/payment", { 
+      state: { 
+        name: formData.name, 
+        email: formData.email 
+      } 
+    });
   };
 
   if (cart.length === 0) {
@@ -69,10 +44,28 @@ const Checkout = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
       <Navbar cartItemsCount={totalItems} />
-      <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-          Checkout
-        </h1>
+      <div className="container mx-auto px-4 py-8">
+        {/* Progress Steps */}
+        <div className="flex items-center justify-center mb-8">
+          <div className="flex items-center gap-2 text-sm">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 text-green-500" />
+              <span className="text-muted-foreground">Cart</span>
+            </div>
+            <div className="w-8 h-px bg-primary" />
+            <div className="flex items-center gap-2">
+              <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold">2</div>
+              <span className="font-semibold text-foreground">Address</span>
+            </div>
+            <div className="w-8 h-px bg-muted" />
+            <div className="flex items-center gap-2">
+              <div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center text-muted-foreground text-xs">3</div>
+              <span className="text-muted-foreground">Payment</span>
+            </div>
+          </div>
+        </div>
+
+        <h1 className="text-3xl font-bold mb-6 text-center">Shipping Details</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <Card className="animate-fade-in">
             <CardHeader>
@@ -115,7 +108,7 @@ const Checkout = () => {
                       Processing...
                     </>
                   ) : (
-                    "Place Order"
+                    "Continue to Payment"
                   )}
                 </Button>
               </form>
